@@ -17,7 +17,7 @@ const Box = ({category}) => {
         <>
             <View style={styles.boxContainer}>
                 {products.map((product, index) => (
-                    <Card key={index} index={product.id} name={product.name} link={product.imageLink} price={product.price}/>
+                    <Card key={index} index={product.id} name={product.name} imgLink={product.imageLink} price={product.price}/>
                 ))}
             </View>
         </>

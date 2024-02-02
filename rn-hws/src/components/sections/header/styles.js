@@ -10,21 +10,21 @@ const styles = StyleSheet.create({
     headerBtn: {
         flex:1,
         fontSize: 18,
-        fontWeight: 500,
+        fontWeight: '500',
         // backgroundColor: 'blue',
         color: 'green'
     },
     filterBtn: {
         flex: 1,
         fontSize: 18,
-        fontWeight: 500,
+        fontWeight: '500',
         // backgroundColor: 'green',
         color: 'green'
     },
     contentText: {
         flex: 1,
         fontSize: 32,
-        fontWeight: 600
+        fontWeight: '600'
         // backgroundColor: 'red',
     },
 })

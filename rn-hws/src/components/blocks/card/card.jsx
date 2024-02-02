@@ -2,15 +2,14 @@ import React from 'react';
 import {Image, Text, View} from "react-native";
 import styles from "../card/styles";
 
-const Card = ({index, link, name, price}) => {
+const Card = ({index, imgLink, name, price}) => {
+
     return (
         <>
             <View style={styles.box} key={index}>
                 <View style={styles.imageContainer}>
-                    {/*<Image style={styles.boxImage} source={require("../../../../" + `${product.imageLink}`)} />*/}
-                    {/*<Image style={styles.boxImage} source={require(`../../../../${product.imageLink}`)} />*/}
-                    <Image style={styles.boxImage} source={{ uri: link }} />
-
+                    <Image style={styles.boxImage} source={{uri: imgLink}} />
+                    <Image style={styles.boxImage} source={require(imgLink)} />
                 </View>
                 <View style={styles.titleContainer}>
                     <Text style={styles.boxTitle}>{name}</Text>

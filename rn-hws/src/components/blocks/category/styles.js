@@ -7,7 +7,7 @@ const styles = StyleSheet.create({
     },
     categoryText: {
         fontSize: 24,
-        fontWeight: 600,
+        fontWeight: '600',
         marginLeft: 10
     },
 })

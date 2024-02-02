@@ -12,14 +12,15 @@ const styles = StyleSheet.create({
     boxImage: {
         width: 100,
         height: 100,
+        // resizeMode: 'stretch',
     },
     boxTitle: {
         fontSize: 12,
-        fontWeight: 700
+        fontWeight: '700'
     },
     boxText: {
         fontSize: 12,
-        fontWeight: 700,
+        fontWeight: '700',
         color: 'black',
     },
     boxTime: {

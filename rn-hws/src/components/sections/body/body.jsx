@@ -1,5 +1,5 @@
 import React from 'react';
-import {View} from "react-native";
+import {ScrollView, View} from "react-native";
 
 import SearchBox from "../../search-box/search-box";
 import Category from "../../blocks/category/category";
@@ -11,14 +11,18 @@ const Body = () => {
         <>
             <View style={styles.body}>
                 <SearchBox/>
-                <Category label='Hot deals'/>
-                <Box category={'Hot Deals'}/>
-                <Category label='Trending'/>
-                <Box category={'Trending'}/>
-                <Category label='For baby'/>
-                <Box category={'For baby'}/>
-                <Category label='Electronics'/>
-                <Box category={'Electronics'}/>
+                <ScrollView horizontal={false}>
+                    <Category label='Hot deals'/>
+                    <Box category={'Hot Deals'}/>
+                    <Category label='Trending'/>
+                    <Box category={'Trending'}/>
+                    <Category label='For baby'/>
+                    <Box category={'For baby'}/>
+                    <Category label='Electronics'/>
+                    <Box category={'Electronics'}/>
+                    <Category label='Books'/>
+                    <Box category={'Books'}/>
+                </ScrollView>
             </View>
         </>
     );

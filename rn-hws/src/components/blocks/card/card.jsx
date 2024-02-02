@@ -8,8 +8,9 @@ const Card = ({index, imgLink, name, price}) => {
         <>
             <View style={styles.box} key={index}>
                 <View style={styles.imageContainer}>
-                    <Image style={styles.boxImage} source={{uri: imgLink}} />
-                    <Image style={styles.boxImage} source={require(imgLink)} />
+                    <Image style={styles.boxImage} source={require('../../../../assets/img/Hot-deals.png')}/>
+                    {/*<Image style={styles.boxImage} source={{uri: imgLink}} />*/}
+                    {/*<Image style={styles.boxImage} source={require(imgLink)} />*/}
                 </View>
                 <View style={styles.titleContainer}>
                     <Text style={styles.boxTitle}>{name}</Text>

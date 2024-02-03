@@ -2,10 +2,14 @@ import {StyleSheet} from "react-native";
 
 const styles = StyleSheet.create({
     header: {
+        // flex: 1,
         flexDirection: 'row',
+        justifyContent: 'space-between',
         alignItems: 'center',
-        // marginTop: 20,
-        padding: 20
+        marginTop: 30,
+        padding: 20,
+        backgroundColor: 'red',
+        height: 80
     },
     headerBtn: {
         flex:1,

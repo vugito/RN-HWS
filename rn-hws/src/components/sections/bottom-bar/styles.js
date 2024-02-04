@@ -16,14 +16,15 @@ const styles = StyleSheet.create({
         width: 35,
         height: 35,
         borderRadius: 20,
-        borderWidth: 1,
-        borderColor: 'grey',
+        // borderWidth: 1,
+        // borderColor: 'grey',
+        backgroundColor: '#e8e8e8',
         alignItems: "center",
         justifyContent: "center"
     },
     img: {
-        width: '70%',
-        height: '70%',
+        width: '65%',
+        height: '65%',
         resizeMode: 'stretch',
 
     }

@@ -12,6 +12,7 @@ const Body = () => {
             <View style={styles.body}>
                 <SearchBox/>
                 <ScrollView horizontal={false}>
+
                     <Category label='Hot deals'/>
                     <Box category={'Hot Deals'}/>
                     <Category label='Trending'/>

@@ -146,7 +146,7 @@ export const Products =  [
     {
         id: 'sad1a5sd34as3',
         category: 'Books',
-        name: 'Den Braun - Wolves',
+        name: 'Den Braun - Inferno',
         imageLink: require('../../assets/img/denbraun-inferno.jpeg'),
         price: 7,
         count: 100,

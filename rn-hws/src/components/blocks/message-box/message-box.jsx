@@ -33,11 +33,29 @@ const MessageBox = ({message}) => {
                                     <Image style={styles.modalImg} source={message.profilePhoto}/>
                                     <Text style={[styles.username, {color: '#e8e8e8'}]}>{`@${message.username}`}</Text>
                                     <Text style={styles.personal}>{`${message.name} ${message.surname}`}</Text>
-                                    <Pressable
-                                        style={[styles.button, styles.buttonClose]}
-                                        onPress={() => setUserInfoModalVisible(!userInfoModalVisible)}>
-                                        <Text style={[styles.username, {color: '#5DB075'}]}>Close</Text>
-                                    </Pressable>
+                                    <View style={{flexDirection: 'row', justifyContent: 'space-between', gap: 2}}>
+                                        <Pressable
+                                            style={[styles.button, styles.buttonClose]}
+                                            onPress={() => setUserInfoModalVisible(!userInfoModalVisible)}>
+                                            <Image source={require('../../../../assets/icons/info-5DB075.png')} style={styles.icons}/>
+                                            {/*<Text style={[styles.username, {color: '#5DB075', fontSize: 20}]}>i</Text>*/}
+                                        </Pressable>
+                                        <Pressable
+                                            style={[styles.button, styles.buttonClose]}
+                                            onPress={() => setUserInfoModalVisible(!userInfoModalVisible)}>
+                                            <Image source={require('../../../../assets/icons/comment-5DB075.png')} style={styles.icons}/>
+
+                                            {/*<Text style={[styles.username, {color: '#5DB075'}]}>i</Text>*/}
+                                        </Pressable>
+                                        <Pressable
+                                            style={[styles.button, styles.buttonClose]}
+                                            onPress={() => setUserInfoModalVisible(!userInfoModalVisible)}>
+                                            <Image source={require('../../../../assets/icons/close-5DB075.png')} style={styles.icons}/>
+                                            {/*<Text style={[styles.username, {color: '#5DB075', fontSize: 20, justifyContent: 'center'}]}>x</Text>*/}
+
+                                        </Pressable>
+                                    </View>
+
                                 </View>
                             </View>
                         </View>

@@ -74,11 +74,12 @@ const styles = StyleSheet.create({
         color: 'grey'
     },
     button: {
-        width: 100,
+        width: 80,
         borderRadius: 10,
         padding: 10,
         elevation: 2,
-        alignItems: 'center'
+        alignItems: 'center',
+        justifyContent: 'center'
     },
     buttonClose: {
         backgroundColor: '#e8e8e8',
@@ -88,6 +89,10 @@ const styles = StyleSheet.create({
         fontWeight: '500',
         color: '#e8e8e8',
         margin: 10
+    },
+    icons: {
+        width: 25,
+        height: 25
     }
 });
 

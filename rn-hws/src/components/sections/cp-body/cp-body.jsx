@@ -2,13 +2,14 @@ import React, {useEffect, useState} from 'react';
 import {RefreshControl, ScrollView, View} from "react-native";
 import SearchBox from "../../search-box/search-box";
 import styles from './styles';
-import {Messages} from "../../../data/messages";
+import {Contents} from "../../../data/contents";
 import MessageBox from "../../blocks/message-box/message-box";
 import {Image} from "expo-image";
+import ContentBox from "../../blocks/content-box/content-box";
 
-const FpBody = () => {
+const CpBody = () => {
 
-    const [messages, setMessages] = useState([]);
+    const [contents, setContents] = useState([]);
     const [refreshing, setRefreshing] = useState(false);
 
     const refreshHandler = () => {
@@ -16,26 +17,25 @@ const FpBody = () => {
     };
 
     useEffect(() => {
-        setMessages(Messages);
+        setContents(Contents);
     }, []);
 
     return (
         <>
             <View style={styles.body}>
                 <SearchBox/>
+
                 <ScrollView
                     refreshControl={
                         <RefreshControl refreshing={refreshing} onRefresh={refreshHandler}/>
                     }
                     horizontal={false}>
-                    {messages.map((msg) => (
-                        <View key={msg.id}>
-                            <MessageBox message={msg}/>
+                    {contents.map((content) => (
+                        <View key={content.id}>
+                            {/*<MessageBox message={msg}/>*/}
+                            <ContentBox content={content}/>
                         </View>
                     ))}
-                    <View style={styles.bottomImgContainer}>
-                        <Image source={require('../../../../assets/img/mausoleum.jpg')} style={styles.bottomImg}/>
-                    </View>
                 </ScrollView>
 
             </View>
@@ -43,4 +43,4 @@ const FpBody = () => {
     );
 };
 
-export default FpBody;
+export default CpBody;

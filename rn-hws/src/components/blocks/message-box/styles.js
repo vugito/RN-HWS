@@ -9,7 +9,8 @@ const styles = StyleSheet.create({
         backgroundColor: '#f1f1f1',
         marginTop: 5,
         marginLeft: 5,
-        marginRight: 5
+        marginRight: 5,
+        opacity: 0.9
     },
     centeredView: {
         // flex: 1,
@@ -61,6 +62,7 @@ const styles = StyleSheet.create({
         justifyContent: 'space-between',
         marginLeft: 10,
         marginRight: 10,
+
     },
     header: {
         flexDirection: 'row',

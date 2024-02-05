@@ -7,6 +7,7 @@ import BottomBar from "./src/components/sections/bottom-bar/bottom-bar";
 import PageHeader from "./src/components/sections/page-header/page-header";
 import AuiButton from "./src/common/aui/aui-button/aui-button";
 import FeedPage from "./src/components/pages/feed-page/feed-page";
+import ContentPage from "./src/components/pages/content-page/content-page";
 
 export default function App() {
     return (
@@ -15,11 +16,14 @@ export default function App() {
             {/* HW 1 */}
             {/*<MainPage/>*/}
 
-            {/* HW 2 & 3 */}
+            {/* HW 2 & 3 & 4 */}
             {/*<MarketPage/>*/}
 
             {/* HW 3 */}
-            <FeedPage/>
+            {/*<FeedPage/>*/}
+
+            {/* HW 4(31.01.24) */}
+            <ContentPage/>
         </View>
     );
 }

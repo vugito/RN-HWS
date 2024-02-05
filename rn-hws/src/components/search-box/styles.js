@@ -4,13 +4,15 @@ const styles = StyleSheet.create({
     searchBoxContainer: {
         // backgroundColor: 'yellow',
         height: 60,
-        marginBottom: 10
+        marginBottom: 5,
+        justifyContent: 'center'
     },
     input: {
         height: 50,
         margin: 12,
         borderWidth: 1,
-        padding: 10,
+        paddingLeft: 20,
+        paddingRight: 20,
         backgroundColor: "#f4f4f4",
         borderColor: "#DDDDDD",
         borderRadius: 50,

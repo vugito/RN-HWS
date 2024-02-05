@@ -1,15 +1,19 @@
 import React from 'react';
 import styles from './styles';
-import {SafeAreaView} from "react-native";
+import {ImageBackground, SafeAreaView} from "react-native";
 
 
 const BasicLayout = ({header,children, footer}) => {
     return (
         <>
             <SafeAreaView style={styles.container}>
-                {header}
-                {children}
-                {footer}
+                <ImageBackground
+                    style={styles.container}
+                    source={require('../../../../assets/bg-img/bg-img3.jpg')}>
+                    {header}
+                    {children}
+                    {footer}
+                </ImageBackground>
             </SafeAreaView>
         </>
     );

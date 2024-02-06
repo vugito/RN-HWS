@@ -7,13 +7,13 @@ import BottomBar from "../../sections/bottom-bar/bottom-bar";
 import FpBody from "../../sections/fp-body/fp-body";
 import {Text} from "react-native";
 
-const FeedPage = () => {
+const FeedPage = ({navigation}) => {
     return (
         <>
             <BasicLayout
-                header={<PageHeader left={<AuiButton text='Back' />}
+                header={<PageHeader left={<AuiButton text='Back' navigation={navigation} />}
                 center={<Text style={{fontSize: 32, fontWeight: '600'}}>Feed</Text>}
-                right={<AuiButton text='Filter' />} />} footer={<BottomBar/>}>
+                right={<AuiButton text='Filter' />} />} footer={<BottomBar navigation={navigation}/>}>
                 {/*<Body/>*/}
 
                 <FpBody/>

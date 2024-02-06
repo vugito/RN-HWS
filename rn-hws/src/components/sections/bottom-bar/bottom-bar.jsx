@@ -1,26 +1,29 @@
 import React from 'react';
 import styles from './styles';
-import {View, Image} from "react-native";
+import {View, Image, Pressable} from "react-native";
 
-const BottomBar = () => {
+const BottomBar = ({navigation}) => {
+
+    console.log('Navigation: ', navigation)
+
     return (
         <>
             <View style={styles.container}>
-                <View style={styles.tabs}>
+                <Pressable onPress={()=>navigation.navigate('MarketPage')} style={styles.tabs}>
                     <Image style={styles.img} source={require('../../../../assets/icons/cart-5DB075.png')}/>
-                </View>
-                <View style={styles.tabs}>
+                </Pressable>
+                <Pressable onPress={()=>navigation.navigate('FeedPage')} style={styles.tabs}>
                     <Image style={styles.img} source={require('../../../../assets/icons/favourite-5DB075.png')}/>
-                </View>
-                <View style={[styles.tabs, {width: 50, height: 50, borderRadius: 25, backgroundColor: "#5DB075"}]}>
+                </Pressable>
+                <Pressable onPress={()=>navigation.replace('Home')} style={[styles.tabs, {width: 50, height: 50, borderRadius: 25, backgroundColor: "#5DB075"}]}>
                     <Image style={styles.img} source={require('../../../../assets/icons/home-white.png')}/>
-                </View>
-                <View style={styles.tabs}>
+                </Pressable>
+                <Pressable onPress={()=>navigation.navigate('ContentPage')} style={styles.tabs}>
                     <Image style={styles.img} source={require('../../../../assets/icons/menu-5DB075.png')}/>
-                </View>
-                <View style={styles.tabs}>
+                </Pressable>
+                <Pressable style={styles.tabs}>
                     <Image style={styles.img} source={require('../../../../assets/icons/user-5DB075.png')}/>
-                </View>
+                </Pressable>
             </View>
         </>
     );

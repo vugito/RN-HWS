@@ -7,13 +7,13 @@ import {Text} from "react-native";
 import BottomBar from "../../sections/bottom-bar/bottom-bar";
 import CpBody from "../../sections/cp-body/cp-body";
 
-const ContentPage = () => {
+const ContentPage = ({navigation}) => {
     return (
         <>
             <BasicLayout
-                header={<PageHeader left={<AuiButton text='Back' />}
+                header={<PageHeader left={<AuiButton text='Back' navigation={navigation} />}
                                     center={<Text style={{fontSize: 32, fontWeight: '600'}}>Content</Text>}
-                                    right={<AuiButton text='Filter' />} />} footer={<BottomBar/>}>
+                                    right={<AuiButton text='Filter' />} />} footer={<BottomBar navigation={navigation}/>}>
                 {/*<Body/>*/}
                 {/*<MpBody/>*/}
                 <CpBody/>

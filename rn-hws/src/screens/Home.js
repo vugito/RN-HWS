@@ -5,13 +5,11 @@ const Home = ({navigation}) => {
 
     console.log('nav', navigation)
 
-
     return (
         <View style={styles.container}>
             <Text>Home Screen</Text>
-            {/*<Button title='Go to MarketPage' onPress={()=>navigation.navigate('MarketPage')}></Button>*/}
+            <Button title='Get Started' onPress={()=>navigation.navigate('SignUp')}></Button>
             {/*<Button title='Reset Navigation' onPress={()=>navigation.replace('Home')}></Button>*/}
-
         </View>
     );
 };

@@ -1,12 +1,12 @@
 import React, {useEffect, useState} from 'react';
 import {RefreshControl, ScrollView, View} from "react-native";
-import SearchBox from "../../search-box/search-box";
-import styles from './styles';
-import {Messages} from "../../../data/messages";
-import MessageBox from "../../blocks/message-box/message-box";
 import {Image} from "expo-image";
+import styles from './styles';
+import {Messages} from "../../../../data/messages";
+import SearchBox from "../../../blocks/search-box/search-box";
+import MessageBox from "../../../blocks/message-box/message-box";
 
-const FpBody = () => {
+const FeedBodyContent = () => {
 
     const [messages, setMessages] = useState([]);
     const [refreshing, setRefreshing] = useState(false);
@@ -34,7 +34,7 @@ const FpBody = () => {
                         </View>
                     ))}
                     <View style={styles.bottomImgContainer}>
-                        <Image source={require('../../../../assets/img/mausoleum.jpg')} style={styles.bottomImg}/>
+                        <Image source={require('../../../../../assets/img/mausoleum.jpg')} style={styles.bottomImg}/>
                     </View>
                 </ScrollView>
 
@@ -43,4 +43,4 @@ const FpBody = () => {
     );
 };
 
-export default FpBody;
+export default FeedBodyContent;

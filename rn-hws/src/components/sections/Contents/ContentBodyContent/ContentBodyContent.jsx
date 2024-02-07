@@ -1,13 +1,12 @@
 import React, {useEffect, useState} from 'react';
 import {RefreshControl, ScrollView, View} from "react-native";
-import SearchBox from "../../search-box/search-box";
-import styles from './styles';
-import {Contents} from "../../../data/contents";
-import MessageBox from "../../blocks/message-box/message-box";
 import {Image} from "expo-image";
-import ContentBox from "../../blocks/content-box/content-box";
+import styles from './styles';
+import {Contents} from "../../../../data/contents";
+import SearchBox from "../../../blocks/search-box/search-box";
+import ContentBox from "../../../blocks/content-box/content-box";
 
-const CpBody = () => {
+const ContentBodyContent = () => {
 
     const [contents, setContents] = useState([]);
     const [refreshing, setRefreshing] = useState(false);
@@ -43,4 +42,4 @@ const CpBody = () => {
     );
 };
 
-export default CpBody;
+export default ContentBodyContent;

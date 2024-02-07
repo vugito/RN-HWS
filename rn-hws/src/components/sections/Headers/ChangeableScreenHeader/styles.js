@@ -6,9 +6,9 @@ const styles = StyleSheet.create({
         justifyContent: 'space-between',
         alignItems: 'center',
         marginTop: 30,
-        padding: 20,
+        padding: 15,
+        height: 80,
         // backgroundColor: 'red',
-        height: 80
     },
     headerTitle: {
         fontSize: 32,

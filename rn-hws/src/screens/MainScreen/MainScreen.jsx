@@ -1,7 +1,7 @@
 import React from 'react';
 import {View} from 'react-native';
-import { ToDoItem } from '../../blocks/todoitem/todoitem';
 import styles from './styles.js';
+import {ToDoItem} from "../../components/blocks/todoitem/todoitem";
 
 
 const MainScreen = () => {

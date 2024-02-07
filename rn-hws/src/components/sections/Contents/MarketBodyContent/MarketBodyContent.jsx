@@ -1,12 +1,12 @@
 import React, {useEffect, useState} from 'react';
 import {RefreshControl, ScrollView, View} from "react-native";
-import SearchBox from "../../search-box/search-box";
-import Category from "../../blocks/category/category";
-import Box from "../../blocks/box/box";
+import Category from "../../../blocks/category/category";
+import Box from "../../../blocks/box/box";
 import styles from './styles';
-import {Categories} from "../../../data/categories";
+import SearchBox from "../../../blocks/search-box/search-box";
+import {Categories} from "../../../../data/categories";
 
-const MpBody = () => {
+const MarketBodyContent = () => {
 
     const [categories, setCategories] = useState([]);
     const [refreshing, setRefreshing] = useState(false);
@@ -38,4 +38,4 @@ const MpBody = () => {
     );
 };
 
-export default MpBody;
+export default MarketBodyContent;

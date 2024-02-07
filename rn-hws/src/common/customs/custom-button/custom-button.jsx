@@ -2,12 +2,13 @@ import React from 'react';
 import styles from './styles';
 import {Pressable, Text} from "react-native";
 
-const AuiButton = ({text, navigation}) => {
+const CustomButton = ({text, navigation}) => {
+
     return (
-        <Pressable onPress={()=>navigation.goBack()} style={styles.container}>
+        <Pressable onPress={navigation} style={styles.container}>
             <Text style={styles.buttonText}>{text}</Text>
         </Pressable>
     );
 };
 
-export default AuiButton;
+export default CustomButton;

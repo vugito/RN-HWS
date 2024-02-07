@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from './styles';
-import {View, Image, Pressable} from "react-native";
+import {View, Image, Pressable, Alert} from "react-native";
 
 const BottomBar = ({navigation}) => {
 
@@ -21,7 +21,7 @@ const BottomBar = ({navigation}) => {
                 <Pressable onPress={()=>navigation.navigate('ContentPage')} style={styles.tabs}>
                     <Image style={styles.img} source={require('../../../../assets/icons/menu-5DB075.png')}/>
                 </Pressable>
-                <Pressable style={styles.tabs}>
+                <Pressable onPress={() => Alert.alert('User Account Screen')} style={styles.tabs}>
                     <Image style={styles.img} source={require('../../../../assets/icons/user-5DB075.png')}/>
                 </Pressable>
             </View>

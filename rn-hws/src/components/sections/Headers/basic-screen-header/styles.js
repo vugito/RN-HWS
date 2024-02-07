@@ -9,6 +9,10 @@ const styles = StyleSheet.create({
         padding: 20,
         // backgroundColor: 'red',
         height: 80
+    },
+    headerTitle: {
+        fontSize: 32,
+        fontWeight: "600"
     }
 });
 

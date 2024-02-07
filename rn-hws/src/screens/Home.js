@@ -9,8 +9,8 @@ const Home = ({navigation}) => {
     return (
         <View style={styles.container}>
             <Text>Home Screen</Text>
-            <Button title='Go to MarketPage' onPress={()=>navigation.navigate('MarketPage')}></Button>
-            <Button title='Reset Navigation' onPress={()=>navigation.replace('Home')}></Button>
+            {/*<Button title='Go to MarketPage' onPress={()=>navigation.navigate('MarketPage')}></Button>*/}
+            {/*<Button title='Reset Navigation' onPress={()=>navigation.replace('Home')}></Button>*/}
 
         </View>
     );

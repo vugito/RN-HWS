@@ -9,8 +9,8 @@ const Contact = ({navigation}) => {
     return (
         <View style={styles.container}>
             <Text>Home Screen</Text>
-            <Button title='Go to Home' onPress={()=>navigation.navigate('Home')}></Button>
-            <Button title='Go to Profile' onPress={()=>navigation.navigate('Profile')}></Button>
+            {/*<Button title='Go to Home' onPress={()=>navigation.navigate('Home')}></Button>*/}
+            {/*<Button title='Go to Profile' onPress={()=>navigation.navigate('Profile')}></Button>*/}
         </View>
     );
 };

@@ -5,7 +5,7 @@ import BasicLayout from "../../../common/layouts/basic-layout/basic-layout";
 import BottomBar from "../../sections/bottom-bar/bottom-bar";
 import MpBody from "../../sections/mp-body/mp-body";
 
-const MarketPage = ({navigation}) => {
+const MarketScreen = ({navigation}) => {
     return (
         <BasicLayout
             headerShown={true}
@@ -19,4 +19,4 @@ const MarketPage = ({navigation}) => {
     );
 };
 
-export default MarketPage;
+export default MarketScreen;

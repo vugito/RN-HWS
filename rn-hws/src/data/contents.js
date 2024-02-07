@@ -7,7 +7,6 @@ export const Contents =  [
         sharedPhoto: require('../../assets/user-profile/vugito.jpg'),
         sharedMessages: 'Guys! Finally I graduated from my university. I wish everyone good luck!',
         createDate: '12m ago'
-
     },
     {
         id: '44asdas2d3212422',

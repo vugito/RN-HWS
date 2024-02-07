@@ -1,8 +1,9 @@
 import React, {useState} from 'react';
 import styles from './styles';
 import {View, Text, TextInput} from "react-native";
+import CustomButton from "../../common/customs/custom-button/custom-button";
 
-const SignIn = () => {
+const SignInScreen = ({navigation}) => {
     const [name, setName] = useState('');
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
@@ -35,9 +36,10 @@ const SignIn = () => {
                 <TextInput keyboardType={'visible-password'} secureTextEntry style={styles.input} value={password} onChangeText={inputPasswordHandler}/>
                 <Text>Repeat password:</Text>
                 <TextInput secureTextEntry style={styles.input} value={repeatPassword} onChangeText={inputRepeatPasswordHandler}/>
+                <CustomButton navigation={()=>navigation.navigate('SignUp')} text='Sign In'/>
             </View>
         </>
     );
 };
 
-export default SignIn;
+export default SignInScreen;

@@ -7,7 +7,7 @@ import {Text} from "react-native";
 import BottomBar from "../../sections/bottom-bar/bottom-bar";
 import CpBody from "../../sections/cp-body/cp-body";
 
-const ContentPage = ({navigation}) => {
+const ContentScreen = ({navigation}) => {
     return (
         <>
             <BasicLayout
@@ -22,4 +22,4 @@ const ContentPage = ({navigation}) => {
     );
 };
 
-export default ContentPage;
+export default ContentScreen;

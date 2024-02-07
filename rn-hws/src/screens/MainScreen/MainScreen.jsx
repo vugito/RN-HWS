@@ -4,7 +4,7 @@ import { ToDoItem } from '../../blocks/todoitem/todoitem';
 import styles from './styles.js';
 
 
-const MainPage = () => {
+const MainScreen = () => {
   return (
     <View style={styles.container}>
         <ToDoItem/>
@@ -13,6 +13,6 @@ const MainPage = () => {
   )
 }
 
-export default MainPage;
+export default MainScreen;
 
 

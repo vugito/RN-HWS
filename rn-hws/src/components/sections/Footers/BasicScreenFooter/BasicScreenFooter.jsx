@@ -2,7 +2,7 @@ import React from 'react';
 import styles from './styles';
 import {View, Image, Pressable, Alert} from "react-native";
 
-const BottomBar = ({navigation}) => {
+const BasicScreenFooter = ({navigation}) => {
 
     console.log('Navigation: ', navigation)
 
@@ -29,4 +29,4 @@ const BottomBar = ({navigation}) => {
     );
 };
 
-export default BottomBar;
+export default BasicScreenFooter;

@@ -7,7 +7,7 @@ import BottomBar from "../../sections/bottom-bar/bottom-bar";
 import FpBody from "../../sections/fp-body/fp-body";
 import {Text} from "react-native";
 
-const FeedPage = ({navigation}) => {
+const FeedScreen = ({navigation}) => {
     return (
         <>
             <BasicLayout
@@ -22,4 +22,4 @@ const FeedPage = ({navigation}) => {
     );
 };
 
-export default FeedPage;
+export default FeedScreen;

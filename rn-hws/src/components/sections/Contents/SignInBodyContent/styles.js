@@ -52,13 +52,8 @@ const styles = StyleSheet.create({
     },
     text: {
         fontSize: 16,
-
+        // color: '#5DB075',
         color: 'white'
-    },
-    forgotText: {
-        fontSize: 18,
-        fontWeight: '500',
-        color: '#5DB075',
     },
     checkboxContainer: {
         flexDirection: 'row'

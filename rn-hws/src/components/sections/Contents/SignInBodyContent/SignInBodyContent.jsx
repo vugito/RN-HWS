@@ -4,19 +4,14 @@ import {MaterialCommunityIcons} from "@expo/vector-icons";
 import styles from './styles';
 import CustomButton from "../../../../common/customs/custom-button/custom-button";
 
-const SignUpBodyContent = ({navigation}) => {
+const SignInBodyContent = ({navigation}) => {
 
-    const [name, setName] = useState('');
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [showPassword, setShowPassword] = useState(false);
 
     const toggleShowPassword = () => {
         setShowPassword(!showPassword);
-    };
-
-    const inputNameHandler = (text) => {
-        setName(text);
     };
 
     const inputEmailHandler = (text) => {
@@ -27,19 +22,10 @@ const SignUpBodyContent = ({navigation}) => {
         setPassword(text);
     };
 
-
     return (
         <KeyboardAvoidingView
             behavior={Platform.OS === 'ios' ? 'padding' : 'height'}
             style={styles.container}>
-            <View style={styles.inputContainer}>
-                <TextInput
-                    placeholder='Name'
-                    placeholderTextColor='#BDBDBD'
-                    style={styles.input}
-                    value={name}
-                    onChangeText={inputNameHandler}/>
-            </View>
             <View style={styles.inputContainer}>
                 <TextInput
                     placeholder='Email'
@@ -68,28 +54,28 @@ const SignUpBodyContent = ({navigation}) => {
                 />
             </View>
 
-            <View style={styles.checkboxContainer}>
-                <MaterialCommunityIcons
-                    name='checkbox-outline'
-                    size={24}
-                    color="#fff"
-                />
-                <Text style={styles.text}>I would like to receive your newsletter and other promotional
-                    information.</Text>
-            </View>
+            {/*<View style={styles.checkboxContainer}>*/}
+            {/*    <MaterialCommunityIcons*/}
+            {/*        name='checkbox-outline'*/}
+            {/*        size={24}*/}
+            {/*        color="#fff"*/}
+            {/*    />*/}
+            {/*    <Text style={styles.text}>I would like to receive your newsletter and other promotional*/}
+            {/*        information.</Text>*/}
+            {/*</View>*/}
 
             <Pressable onPress={() => {
                 console.log('Opened SignInScreen');
-                Alert.alert("Не работает. Нажмите ОК, а дальше на 'Login' в правом верхнем углу");
+                Alert.alert("Не работает. Нажмите ОК, а дальше на 'Log In' вверху");
             }} style={styles.button}>
-                <Text style={styles.buttonText}>Sign Up</Text>
+                <Text style={styles.buttonText}>Log In</Text>
             </Pressable>
 
             <Pressable onPress={() => {
                 console.log('Opened ForgotPasswordScreen');
-                Alert.alert("Не работает. Нажмите ОК, а дальше на 'Login' в правом верхнем углу");
+                Alert.alert("Не работает. Нажмите ОК, а дальше на 'Log In' вверху");
             }}>
-                <Text style={styles.forgotText}>Forgot your password?</Text>
+                <Text style={styles.buttonText}>Forgot your password?</Text>
             </Pressable>
 
             {/*Обнаружил что нужно оптимизировать Кастомный Бутон. Добавить стилизацию*/}
@@ -98,4 +84,4 @@ const SignUpBodyContent = ({navigation}) => {
     );
 };
 
-export default SignUpBodyContent;
+export default SignInBodyContent;

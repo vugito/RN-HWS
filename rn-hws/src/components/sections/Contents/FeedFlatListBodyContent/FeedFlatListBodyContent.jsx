@@ -6,7 +6,7 @@ import {Messages} from "../../../../data/messages";
 import SearchBox from "../../../blocks/search-box/search-box";
 import MessageBox from "../../../blocks/message-box/message-box";
 
-const FeedBodyContent = () => {
+const FeedFlatListBodyContent = () => {
 
     const [messages, setMessages] = useState([]);
     const [refreshing, setRefreshing] = useState(false);
@@ -19,30 +19,42 @@ const FeedBodyContent = () => {
         setMessages(Messages);
     }, []);
 
+    const Item = ({msg}) => (
+        <View>
+            <MessageBox message={msg}/>
+        </View>
+    );
+
 
     return (
         <>
             <View style={styles.body}>
                 <SearchBox/>
-                <ScrollView
+                <View
                     refreshControl={
                         <RefreshControl refreshing={refreshing} onRefresh={refreshHandler}/>
                     }
                     horizontal={false}>
-                    {messages.map((msg) => (
-                        <View key={msg.id}>
-                            <MessageBox message={msg}/>
-                        </View>
-                    ))}
+                    {/*{messages.map((msg) => (*/}
+                    {/*    <View key={msg.id}>*/}
+                    {/*        <MessageBox message={msg}/>*/}
+                    {/*    </View>*/}
+                    {/*))}*/}
 
-                    <View style={styles.bottomImgContainer}>
-                        <Image source={require('../../../../../assets/img/mausoleum.jpg')} style={styles.bottomImg}/>
-                    </View>
-                </ScrollView>
+                    <FlatList
+                        data={messages}
+                        renderItem={({item}) => <Item msg={item} />}
+                        keyExtractor={item => item.id}
+                    />
+
+                    {/*<View style={styles.bottomImgContainer}>*/}
+                    {/*    <Image source={require('../../../../../assets/img/mausoleum.jpg')} style={styles.bottomImg}/>*/}
+                    {/*</View>*/}
+                </View>
 
             </View>
         </>
     );
 };
 
-export default FeedBodyContent;
+export default FeedFlatListBodyContent;

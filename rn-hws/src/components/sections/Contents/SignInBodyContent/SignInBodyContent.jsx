@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import {Alert, KeyboardAvoidingView, Platform, Pressable, Text, TextInput, View} from "react-native";
+import {Alert, KeyboardAvoidingView, Linking, Platform, Pressable, Text, TextInput, View} from "react-native";
 import {MaterialCommunityIcons} from "@expo/vector-icons";
 import styles from './styles';
 import CustomButton from "../../../../common/customs/custom-button/custom-button";
@@ -21,6 +21,12 @@ const SignInBodyContent = ({navigation}) => {
     const inputPasswordHandler = (text) => {
         setPassword(text);
     };
+
+    const handleForgotPassword = () => {
+        const email = 'vuqar21@gmail.com';
+
+        Linking.openURL(`mailto:${email}`).then(r => console.log(r));
+    }
 
     return (
         <KeyboardAvoidingView
@@ -72,6 +78,7 @@ const SignInBodyContent = ({navigation}) => {
             </Pressable>
 
             <Pressable onPress={() => {
+                handleForgotPassword();
                 console.log('Opened ForgotPasswordScreen');
                 Alert.alert("Не работает. Нажмите ОК, а дальше на 'Log In' вверху");
             }}>

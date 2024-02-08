@@ -6,6 +6,7 @@ import MarketScreen from "../screens/MarketScreen/MarketScreen";
 import FeedScreen from "../screens/FeedScreen/FeedScreen";
 import ContentScreen from "../screens/ContentScreen/ContentScreen";
 import MainScreen from "../screens/MainScreen/MainScreen";
+import AboutDeviceScreen from "../screens/AboutDeviceScreen/AboutDeviceScreen";
 
 const Stack = createNativeStackNavigator();
 
@@ -15,7 +16,7 @@ const RootNavigation = () => {
             screenOptions={{
                 headerShown: false
             }}
-            initialRouteName="Home">
+            initialRouteName="AboutDevice">
 
             <Stack.Screen name='Home' component={Home}/>
             <Stack.Screen name='SignUp' component={SignUpScreen}/>
@@ -23,6 +24,8 @@ const RootNavigation = () => {
             <Stack.Screen name='Market' component={MarketScreen}/>
             <Stack.Screen name='Feed' component={FeedScreen}/>
             <Stack.Screen name='Content' component={ContentScreen}/>
+            <Stack.Screen name='AboutDevice' component={AboutDeviceScreen}/>
+
 
         </Stack.Navigator>
     )

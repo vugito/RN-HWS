@@ -27,7 +27,11 @@ const styles = StyleSheet.create({
         height: '65%',
         resizeMode: 'stretch',
 
-    }
+    },
+    icon: {
+        // marginLeft: 10,
+
+    },
 });
 
 export default styles;
